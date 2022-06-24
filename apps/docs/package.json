@@ -12,8 +12,8 @@
     "next": "12.0.8",
     "nextra": "2.0.0-alpha.56",
     "nextra-theme-docs": "2.0.0-alpha.56",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "^18",
+    "react-dom": "^18",
     "ui": "*"
   },
   "devDependencies": {
