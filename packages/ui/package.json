@@ -15,7 +15,7 @@
     "@chakra-ui/icons": "^2",
     "@auth0/nextjs-auth0": "^1",
     "next": "^10",
-    "react": "^18"
+    "react": "^17"
   },
   "devDependencies": {
     "@types/react": "^17.0.37",
