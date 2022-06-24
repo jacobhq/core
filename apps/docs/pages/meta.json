@@ -4,5 +4,8 @@
     },
     "getting-started": {
         "title": "Getting started"
+    },
+    "playground": {
+        "title": "Playground"
     }
 }

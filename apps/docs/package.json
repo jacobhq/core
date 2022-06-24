@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^1.2.0",
     "next": "12.0.8",
     "nextra": "2.0.0-alpha.56",
     "nextra-theme-docs": "2.0.0-alpha.56",
