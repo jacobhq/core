@@ -13,7 +13,7 @@ type layoutProps = {
   children: ReactNode
 }
 
-export default function Layout({ children, title, appTitle, description }: layoutProps) {
+export function Layout({ children, title, appTitle, description }: layoutProps) {
   const { colorMode, toggleColorMode } = useColorMode()
   const { user, isLoading: authLoading } = useUser();
   const [isLoading, setLoading] = useState(false)
