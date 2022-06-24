@@ -1,7 +1,7 @@
 // theme.config.js
 export default {
     projectLink: 'https://github.com/jacobhq/core', // GitHub link in the navbar
-    docsRepositoryBase: 'https://github.com/jacobhq/core/blob/main', // base URL for the docs repository
+    docsRepositoryBase: 'https://github.com/jacobhq/core/blob/main/apps/docs', // base URL for the docs repository
     titleSuffix: ' – JacobHQ Core',
     nextLinks: true,
     prevLinks: true,
@@ -11,7 +11,7 @@ export default {
     footer: true,
     feedbackLink: "Give feedback on this page",
     floatTOC: true,
-    footerText: `MIT ${new Date().getFullYear()} © Shu Ding.`,
+    footerText: `© ${new Date().getFullYear()}, Jacob Marshall.`,
     footerEditLink: `Edit this page on GitHub`,
     logo: (
       <>
@@ -22,8 +22,8 @@ export default {
     head: (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Nextra: the next docs builder" />
-        <meta name="og:title" content="Nextra: the next docs builder" />
+        <meta name="description" content="JacobHQ Core - UI components used by JacobHQ" />
+        <meta name="og:title" content="JacobHQ Core - UI components used by JacobHQ" />
       </>
     ),
   }
