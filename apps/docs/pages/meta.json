@@ -10,5 +10,8 @@
     },
     "components": {
         "title": "Components"
+    },
+    "proxy": {
+        "title": "Proxy"
     }
 }
