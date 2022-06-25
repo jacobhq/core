@@ -1,6 +1,6 @@
 {
   "name": "jhq-ui",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "./index.tsx",
   "types": "./index.tsx",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "@emotion/styled": ">=11",
     "framer-motion": ">=5",
     "@chakra-ui/icons": ">=1.1.1"
-},
+  },
   "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
