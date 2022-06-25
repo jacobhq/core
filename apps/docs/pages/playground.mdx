@@ -3,22 +3,11 @@ title: Playground
 description: Try out our components.
 ---
 
-import { Sandpack } from "@codesandbox/sandpack-react";
+import Play from "../components/playground";
 
 # Playground
+This is a playground, where you can try out any of the JacobHQ UI components, and, if needed, open them in Codesandbox to continue your work. To use authentication, please login [here](/api/auth/login), not in the demo.
 
-<Sandpack
- template="react"
-  customSetup={{
-    dependencies: {
-      "jhq-ui": "latest",
-    },
-  }}
-  files={{
-    "/App.js": `export default function App() {
-  return <h1>Hello Sandpack</h1>
-}`,
-  }}
-/>
+<Play imports={['Layout']} content={`<Layout appTitle="Demo" description="This is a demo of the Layout component."></Layout>`} />
 
-hi
+The integration with Auth0 won't work in these demos.

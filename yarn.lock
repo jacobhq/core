@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@auth0/nextjs-auth0@^1":
+"@auth0/nextjs-auth0@^1", "@auth0/nextjs-auth0@^1.9.1":
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/@auth0/nextjs-auth0/-/nextjs-auth0-1.9.1.tgz#e7a0e8688b26cee490ed7599fba3b2550b7b698b"
   integrity sha512-GvX1Ke9YzZRogIvSZhRRuZFwvw5DNuQv233VBUHrUwNi+z/XFE6ZRC0y22NgLsz4xsVdG9WicEwqoFT4rNL/Bw==
