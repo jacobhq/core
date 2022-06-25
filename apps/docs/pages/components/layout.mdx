@@ -1,2 +1,12 @@
+import Play from "../../components/playground";
+
 # Layout
 A layout component that provides a header, combined with reactive data fetched from the JacobHQ API.
+
+### Usage
+<Play imports={['Layout']} content={`<Layout appTitle="Components" title="Layout" description="This is a demo of the Layout component.">Some example content</Layout>`} />
+
+### Props
+- `appTitle` - Sets the title of the app.
+- `description` - The text displayed below the title.
+- `title` - Sets the page title, and adds a breadcrumb if set. Falls back to `appTitle` if undefined.
