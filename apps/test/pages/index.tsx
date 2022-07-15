@@ -5,7 +5,6 @@ import { ChakraProvider } from "@chakra-ui/react"
 export default function Web() {
     return (
         <div>
-            <h1>Web</h1>
             <UserProvider>
                 <ChakraProvider>
                     <Layout appTitle={"a"}>

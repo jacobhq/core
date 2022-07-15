@@ -4,5 +4,8 @@
     },
     "layout": {
         "title": "Layout"
+    },
+    "donate": {
+        "title": "Donate"
     }
 }
