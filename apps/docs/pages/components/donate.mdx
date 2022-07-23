@@ -1,0 +1,15 @@
+import Play from "../../components/playground";
+
+# Donate
+The `Donate` component provides a modal allowing the user to choose the amount of coffees to donate.
+
+### Usage
+<Play imports={['Donate']} chakraImports={["Button", "Box"]} customImports={['import { useRef } from "react"']} js={['const donateRef = useRef()']} content={`<Box p={4}>
+          <Button onClick={() => donateRef.current.openModal()}>Open modal</Button>
+        </Box>
+        <Donate ref={donateRef} />`} />
+
+As you can see, you can use `donateRef.current.openModal()` to open the modal from any component.
+
+### Props
+- `ref` - Ref used for opening the modal.

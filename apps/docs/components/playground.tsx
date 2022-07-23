@@ -2,10 +2,13 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 type PlayProps = {
     content: string
+    js?: string[]
     imports: string[]
+    customImports?: string[]
+    chakraImports?: string[]
 }
 
-export default function Play ({ content, imports }: PlayProps) {
+export default function Play ({ content, imports, js, customImports, chakraImports }: PlayProps) {
     return <>
         <br />
         <Sandpack
@@ -13,9 +16,11 @@ export default function Play ({ content, imports }: PlayProps) {
      files={{
     "/App.tsx": `import { ${imports.join(', ')} } from 'jhq-ui' 
 import { UserProvider } from '@auth0/nextjs-auth0'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider${chakraImports && ', ' + chakraImports.join(", ")} } from '@chakra-ui/react'
+${customImports && customImports.join("\r\n")}
 
 export default function App(): JSX.Element {
+  ${js && js.join("\r\n")}
   return (
     <ChakraProvider>
       <UserProvider>
@@ -36,7 +41,7 @@ export default function App(): JSX.Element {
         react: '^18.0.0',
         'react-dom': '^18.0.0',
         'react-scripts': '^4.0.0',
-        'jhq-ui': '^0.1.0',
+        'jhq-ui': 'latest',
         'next': '^10',
         '@auth0/nextjs-auth0': '^1'
       },
