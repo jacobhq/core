@@ -1,0 +1,63 @@
+import Head from 'next/head'
+import Link from 'next/link'
+import { allPosts } from '.contentlayer/generated'
+import { Post } from '.contentlayer/generated'
+import { Heading, HStack, Avatar, Button, Text, useDisclosure, Tooltip, VStack, Divider } from '@chakra-ui/react'
+import { MDXRemote } from 'next-mdx-remote'
+import components from 'components/MDXComponents';
+import { serialize } from 'next-mdx-remote/serialize'
+
+export async function getStaticPaths() {
+  const paths = allPosts.map((p) => ({ params: { slug: p.slug } }))
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }: any) {
+  const post = allPosts.find((post: any) => post.slug === params.slug)
+  const mdx = await serialize(post.body.raw)
+  return {
+    props: {
+      post, mdx
+    }
+  }
+}
+
+const PostLayout = ({ post, mdx }: { post: Post, mdx: any }) => {
+  let { isOpen, onToggle } = useDisclosure()
+  return (
+    <>
+      <Head>
+        <title>{post.title} - Blog | JacobHQ</title>
+      </Head>
+      <article>
+        <Heading>{post.title}</Heading>
+        <HStack justifyContent="space-between" pt={4}>
+          <HStack>
+            <Avatar name={post.author} src={post.avatar} size="sm" />
+            <VStack spacing={0} alignItems="start">
+              <Text as="strong">
+                hi
+              </Text>
+              <Text as="small">
+                Date
+              </Text>
+            </VStack>
+          </HStack>
+          <Tooltip label={!isOpen ? "Show wordcount" : "Show reading time"}>
+            <Button onClick={onToggle} variant="ghost" size="sm">{!isOpen ? post.readingTime.text : `${post.readingTime.words} words`}</Button>
+          </Tooltip>
+        </HStack>
+        <Divider my={4} mb={6} />
+        <MDXRemote {...mdx} components={components} />
+        <Link href="/blog">
+          <Button variant="ghost" marginTop="50px">&larr; Back to blog</Button>
+        </Link>
+      </article>
+    </>
+  )
+}
+
+export default PostLayout
